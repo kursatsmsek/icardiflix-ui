@@ -1,7 +1,6 @@
 import Banner from "@/components/banner";
 import Header from "@/components/header";
 import Row from "@/components/row";
-import Head from "next/head";
 import React from "react";
 
 function HomeContainer() {
