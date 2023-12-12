@@ -6,7 +6,7 @@ import MuiModal from "@mui/material/Modal";
 import { IoMdClose } from "react-icons/io";
 
 function Popup() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
