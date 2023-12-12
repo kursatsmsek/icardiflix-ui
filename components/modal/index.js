@@ -1,7 +1,6 @@
 "use client";
 import { Dialog } from "@mui/material";
 import React, { useState } from "react";
-import { FaPlay } from "react-icons/fa6";
 import ReactPlayer from "react-player";
 import MuiModal from "@mui/material/Modal";
 import { IoMdClose } from "react-icons/io";

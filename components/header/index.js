@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import GB from "country-flag-icons/react/3x2/GB";
+import ES from "country-flag-icons/react/3x2/ES";
+import TR from "country-flag-icons/react/3x2/TR";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,10 +41,17 @@ function Header() {
         </ul>
       </div>
 
-      <div className="flex items-center space-x-4 text-sm font-light">
+      <div className="items-center space-x-4 text-sm font-light">
         <ul className="hidden space-x-4 md:flex">
-          <li className="headerLink">EN</li>
-          <li className="headerLink">ES</li>
+          <li className="headerLink">
+            <GB title="United States" className="h-5" />
+          </li>
+          <li className="headerLink">
+            <ES title="United States" className="h-5" />
+          </li>
+          <li className="headerLink">
+            <TR title="United States" className="h-5" />
+          </li>
         </ul>
       </div>
     </header>
