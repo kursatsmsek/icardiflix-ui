@@ -21,17 +21,17 @@ export default function LocaleSwitcher({ lang }) {
     <ul className="hidden space-x-4 md:flex">
       <li className={`headerLink ${lang === "en" && "hidden"}`}>
         <Link href={redirectedPathName("en")}>
-          <GB title="United States" className="h-5" />
+          <GB title="English" className="h-5" />
         </Link>
       </li>
       <li className={`headerLink ${lang === "tr" && "hidden"}`}>
         <Link href={redirectedPathName("tr")}>
-          <TR title="United States" className="h-5" />
+          <TR title="Türkçe" className="h-5" />
         </Link>
       </li>
       <li className={`headerLink ${lang === "es" && "hidden"}`}>
         <Link href={redirectedPathName("es")}>
-          <ES title="United States" className="h-5" />
+          <ES title="Español" className="h-5" />
         </Link>
       </li>
     </ul>
