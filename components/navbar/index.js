@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "../locale-switcher";
+import Link from "next/link";
 
 function Navbar({ lang, i18n }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,18 +28,34 @@ function Navbar({ lang, i18n }) {
   return (
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <Image
-          src="/icardiflix-logo.png"
-          width={160}
-          height={100}
-          className="cursor-pointer object-contain w-auto h-auto"
-          alt="netflix logo"
-        />
+        <Link href="/">
+          <Image
+            src="/icardiflix-logo.png"
+            width={160}
+            height={100}
+            className="cursor-pointer object-contain w-auto h-auto mr-4"
+            alt="netflix logo"
+          />
+        </Link>
 
-        <ul className="hidden space-x-4 md:flex">
-          <li className="headerLink">Developer Contact</li>
-          <li className="headerLink">Add Video</li>
-        </ul>
+        <Link
+          className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
+          href={`${lang}/add-video`}
+        >
+          Add Video
+        </Link>
+        <Link
+          className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
+          href={`${lang}/developer-contact`}
+        >
+          Developer Contact
+        </Link>
+        {/* <Link
+          className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
+          href={`${lang}/3d-figure`}
+        >
+          3D Figure Toy
+        </Link> */}
       </div>
 
       <div className="items-center space-x-4 text-sm font-light">

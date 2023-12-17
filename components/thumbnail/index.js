@@ -11,7 +11,7 @@ function Thumbnail() {
       //   }
       //   }
     >
-      <div class="z-50 absolute text-sm p-2 bg-opacity-60 bg-red-500 bg-blur-md rounded-md m-1">
+      <div className="z-30 absolute text-sm p-2 bg-opacity-60 bg-red-500 bg-blur-md rounded-md m-1">
         NEW
       </div>
 

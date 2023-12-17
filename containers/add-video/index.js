@@ -41,7 +41,7 @@ function AddVideoContainer() {
       {/* url  */}
       <div className="mb-5">
         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-          Video Linki
+          Youtube Linki
         </label>
         <input
           id="url"
