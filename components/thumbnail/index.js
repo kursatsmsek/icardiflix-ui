@@ -11,6 +11,10 @@ function Thumbnail() {
       //   }
       //   }
     >
+      <div class="z-50 absolute text-sm p-2 bg-opacity-60 bg-red-500 bg-blur-md rounded-md m-1">
+        NEW
+      </div>
+
       <Image
         src={
           "https://cdn.ntvspor.net/0c780bf287944ff28d656d071a815e49.jpg?mode=crop&w=940&h=626"
