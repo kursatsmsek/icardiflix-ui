@@ -31,7 +31,7 @@ function Navbar({ lang, i18n }) {
           src="/icardiflix-logo.png"
           width={160}
           height={100}
-          className="cursor-pointer object-contain"
+          className="cursor-pointer object-contain w-auto h-auto"
           alt="netflix logo"
         />
 
