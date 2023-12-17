@@ -28,7 +28,7 @@ function Navbar({ lang, i18n }) {
   return (
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <Link href="/">
+        <Link href={`/${lang}`}>
           <Image
             src="/icardiflix-logo.png"
             width={160}
@@ -40,13 +40,13 @@ function Navbar({ lang, i18n }) {
 
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
-          href={`${lang}/add-video`}
+          href={`/${lang}/add-video`}
         >
           Add Video
         </Link>
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
-          href={`${lang}/developer-contact`}
+          href={`/${lang}/developer-contact`}
         >
           Developer Contact
         </Link>

@@ -6,6 +6,7 @@ import { IoLanguageSharp } from "react-icons/io5";
 import GB from "country-flag-icons/react/3x2/GB";
 import ES from "country-flag-icons/react/3x2/ES";
 import TR from "country-flag-icons/react/3x2/TR";
+import HamburgerMenu from "./menu";
 
 export default function LocaleSwitcher({ lang }) {
   const pathName = usePathname();
@@ -18,7 +19,7 @@ export default function LocaleSwitcher({ lang }) {
   };
 
   return (
-    <ul className="hidden space-x-4 md:flex">
+    <ul className="flex items-center justify-center space-x-4 md:flex mr-2">
       <li className={`headerLink ${lang === "en" && "hidden"}`}>
         <Link href={redirectedPathName("en")}>
           <GB title="English" className="h-5" />
@@ -33,6 +34,9 @@ export default function LocaleSwitcher({ lang }) {
         <Link href={redirectedPathName("es")}>
           <ES title="Español" className="h-5" />
         </Link>
+      </li>
+      <li class="block md:hidden">
+        <HamburgerMenu />
       </li>
     </ul>
   );
