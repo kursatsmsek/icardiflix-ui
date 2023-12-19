@@ -50,15 +50,15 @@ function Navbar({ lang, i18n }) {
         >
           Developer Contact
         </Link>
-        {/* <Link
+        <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
-          href={`${lang}/3d-figure`}
+          href={`/${lang}/3d-figure`}
         >
-          3D Figure Toy
-        </Link> */}
+          3D Figür Oyuncak
+        </Link>
       </div>
 
-      <div className="items-center space-x-4 text-sm font-light">
+      <div className="items-center ml-4 space-x-4 text-sm font-light">
         <LocaleSwitcher lang={lang} />
       </div>
     </header>

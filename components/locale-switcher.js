@@ -36,7 +36,7 @@ export default function LocaleSwitcher({ lang }) {
         </Link>
       </li>
       <li class="block md:hidden">
-        <HamburgerMenu />
+        <HamburgerMenu lang={lang} />
       </li>
     </ul>
   );
