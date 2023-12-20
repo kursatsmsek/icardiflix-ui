@@ -1,5 +1,4 @@
 "use client";
-import { Dialog } from "@mui/material";
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import MuiModal from "@mui/material/Modal";

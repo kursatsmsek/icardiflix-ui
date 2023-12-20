@@ -35,7 +35,7 @@ export default function LocaleSwitcher({ lang }) {
           <ES title="Español" className="h-5" />
         </Link>
       </li>
-      <li class="block md:hidden">
+      <li className="block md:hidden">
         <HamburgerMenu lang={lang} />
       </li>
     </ul>

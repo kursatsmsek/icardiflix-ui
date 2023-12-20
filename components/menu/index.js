@@ -19,7 +19,7 @@ function HamburgerMenu({ lang }) {
         onClose={() => setDrawerOpen(false)}
       >
         <div className="flex flex-col w-72 h-full text-[red]/80 bg-[#141414]">
-          <div class="h-1/4 flex justify-center items-center">
+          <div className="h-1/4 flex justify-center items-center">
             <Link href={`/${lang}`}>
               <Image
                 src="/icardiflix-logo.png"
@@ -31,7 +31,7 @@ function HamburgerMenu({ lang }) {
               />
             </Link>
           </div>
-          <div class="h-2/4 flex flex-col justify-center bg-[#141414]">
+          <div className="h-2/4 flex flex-col justify-center bg-[#141414]">
             <button className="block p-3 m-4 bg-white border-4 border-red-500 rounded shadow dark:border-red-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800">
               <Link
                 className=" p-3 rounded"
@@ -60,7 +60,7 @@ function HamburgerMenu({ lang }) {
               </Link>
             </button>
           </div>
-          <div class="h-1/4 flex justify-center bg-[#141414]">
+          <div className="h-1/4 flex justify-center bg-[#141414]">
             <Link href={`/${lang}`} onClick={() => setDrawerOpen(false)}>
               <Image src={Icardi} width={80} height={100} alt="mauro-icardi" />
             </Link>
