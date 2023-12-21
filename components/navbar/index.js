@@ -8,8 +8,6 @@ function Navbar({ lang, i18n }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    console.log("lang => ", lang);
-    console.log("i18n => ", i18n);
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
