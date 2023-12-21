@@ -1,12 +1,12 @@
 "use client";
-import { Button, Drawer } from "@mui/material";
+import { Drawer } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import Icardi from "@/assets/menu-photo.png";
 
-function HamburgerMenu({ lang }) {
+function HamburgerMenu({ lang, i18n }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -38,7 +38,7 @@ function HamburgerMenu({ lang }) {
                 href={`/${lang}/add-video`}
                 onClick={() => setDrawerOpen(false)}
               >
-                Add Video
+                {i18n.navigation.addVideo}
               </Link>
             </button>
             <button className="block p-3 m-4 bg-white border-4 border-red-500 rounded shadow dark:border-red-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800">
@@ -47,7 +47,7 @@ function HamburgerMenu({ lang }) {
                 href={`/${lang}/developer-contact`}
                 onClick={() => setDrawerOpen(false)}
               >
-                Developer Contact
+                {i18n.navigation.developerContact}
               </Link>
             </button>
             <button className="block p-3 m-4 bg-white border-4 border-red-500 rounded shadow dark:border-red-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800">
@@ -56,7 +56,7 @@ function HamburgerMenu({ lang }) {
                 href={`/${lang}/3d-figure`}
                 onClick={() => setDrawerOpen(false)}
               >
-                3D Figür Oyuncak
+                {i18n.navigation.figureToy}
               </Link>
             </button>
           </div>
@@ -65,30 +65,6 @@ function HamburgerMenu({ lang }) {
               <Image src={Icardi} width={80} height={100} alt="mauro-icardi" />
             </Link>
           </div>
-          {/* <Link href={`/${lang}`}>
-            <Image
-              src="/icardiflix-logo.png"
-              width={120}
-              height={100}
-              className="cursor-pointer object-contain w-auto h-auto m-4"
-              alt="netflix logo"
-            />
-          </Link>
-          <button className="block p-4">
-            <Link className=" p-3 rounded" href={`/${lang}/add-video`}>
-              Add Video
-            </Link>
-          </button>
-          <button className="block p-4">
-            <Link className=" p-3 rounded" href={`/${lang}/developer-contact`}>
-              Developer Contact
-            </Link>
-          </button>
-          <button className="block p-4">
-            <Link className=" p-3 rounded" href={`/${lang}/3d-figure`}>
-              3D Figür Oyuncak
-            </Link>
-          </button> */}
         </div>
       </Drawer>
     </div>

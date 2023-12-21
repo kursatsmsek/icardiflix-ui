@@ -8,7 +8,7 @@ import ES from "country-flag-icons/react/3x2/ES";
 import TR from "country-flag-icons/react/3x2/TR";
 import HamburgerMenu from "./menu";
 
-export default function LocaleSwitcher({ lang }) {
+export default function LocaleSwitcher({ lang, i18n }) {
   const pathName = usePathname();
 
   const redirectedPathName = (locale) => {
@@ -36,7 +36,7 @@ export default function LocaleSwitcher({ lang }) {
         </Link>
       </li>
       <li className="block md:hidden">
-        <HamburgerMenu lang={lang} />
+        <HamburgerMenu lang={lang} i18n={i18n} />
       </li>
     </ul>
   );

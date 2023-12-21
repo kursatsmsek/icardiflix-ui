@@ -1,42 +1,43 @@
 {
   "navigation": {
-    "developerContact": "Geliştirici İletişim",
-    "addVideo": "Video Ekle",
-    "figureToy": "Figür Oyuncak"
+    "developerContact": "Developer Contact",
+    "addVideo": "Add Video",
+    "figureToy": "Figure Toy"
   },
   "page": {
-    "mauroIcardi": "Maruo Icardi",
-    "slogan": "Adına şarkılar yazıldı, okunan şarkılar ona yorumlandı. Tüm Türkiye'ye ezberlettiği şarkıyı şimdi Avrupa'ya dinletme zamanı...",
-    "soon": "Yakında!",
-    "mailNotify": "Geldiğinde haber vermemizi ister misiniz ?",
-    "letMeKnow": "Haber Ver",
-    "mailPlaceHolder": "eposta-hesabın@ornek.com",
-    "youCanAddVideo": "Sitede olmasını istediğiniz videoyu ekleyebilirsiniz. Sadece yüksek kaliteli videolar onaylanır ve sergilenir.",
-    "videoOwner": "Video Sahibi",
+    "mauroIcardi": "Mauro Icardi",
+    "slogan": "Songs have been written in his name, songs sung about him. It's time to let the song he taught all of Turkey reach Europe now...",
+    "soon": "Coming Soon!",
+    "mailNotify": "Would you like to be notified when it arrives?",
+    "letMeKnow": "Notify Me",
+    "mailPlaceHolder": "email address",
+    "youCanAddVideo": "You can add the video you want to see on the site. Only high-quality videos will be approved and showcased.",
+    "videoOwner": "Video Owner",
     "ownerPlaceHolder": "Galatasaray",
     "youtubeLink": "Youtube Link",
-    "linkPlaceHolder": "Ör: youtube.com/watch?v=7YRTcNtv8pk",
-    "description": "Açıklama",
-    "descriptionPlaceHolder": "Video hakkında bir şeyler...",
-    "category": "Kategori"
+    "linkPlaceHolder": "E.g., youtube.com/watch?v=7YRTcNtv8pk",
+    "description": "Description",
+    "descriptionPlaceHolder": "Something about the video...",
+    "category": "Category"
   },
   "button": {
-    "play": "Oynat",
-    "send": "Gönder"
+    "play": "Play",
+    "send": "Send"
   },
   "developer": {
-    "coffeIsCheap": "Kahve ucuz peki ya kod ?",
-    "buyMeCoffe": "Tıkla ve bana bir kahve ısmarla.",
+    "coffeIsCheap": "Coffee is cheap, but what about code?",
+    "buyMeCoffe": "Click and treat me to a coffee.",
     "fullStackDeveloper": "Full Stack Developer",
     "name": "Kürşat Şimşek",
-    "about": "Yazılım geliştiriciyim, bazen ilham gelir ve projeler geliştiririm. Ayrıca mühendislik öğrencisiyim. Cimbom maçlarını kaçırmam. Tüm takımı severim Icardi'yi ayrı severim. 🦁",
-    "contactMe": "Eleştiriler ve yeni fikirler için iletişime açığım. Aşağıdaki bağlantılardan ulaşabilirsiniz."
+    "about": "I'm a software developer; sometimes inspiration strikes, and I develop projects. Also, I'm an engineering student. I never miss Galatasaray matches. I love the entire team, but I love Icardi separately.",
+    "contactMe": "I'm open to feedback and new ideas. You can reach me through the links below."
   },
   "categories": {
-    "news": "Haberler",
-    "popular": "Popüler",
-    "biographic": "Biyografik",
-    "mentions": "Bahsedilenler",
-    "other": "Diğer"
+    "choose": "Choose",
+    "news": "News",
+    "popular": "Popular",
+    "biographic": "Biographic",
+    "mentions": "Mentions",
+    "other": "Other"
   }
 }

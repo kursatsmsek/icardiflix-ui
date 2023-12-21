@@ -22,13 +22,13 @@ function Banner({ lang, i18n }) {
         {i18n.page.slogan}
       </p>
 
-      <div className="flex space-x-3">
+      <div className="flex">
         <button className="bannerButton bg-white text-black">
           <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" />{" "}
           {i18n.button.play}
         </button>
         <button
-          className="bannerButton bg-[gray]/70"
+          className="bannerButton bg-[gray]/70 ml-4 mr-4"
           //   onClick={() => {
           //     setCurrentMovie(movie)
           //     setShowModal(true)

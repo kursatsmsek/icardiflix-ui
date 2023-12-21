@@ -10,7 +10,7 @@
     "soon": "Yakında!",
     "mailNotify": "Geldiğinde haber vermemizi ister misiniz ?",
     "letMeKnow": "Haber Ver",
-    "mailPlaceHolder": "eposta-hesabın@ornek.com",
+    "mailPlaceHolder": "e-posta adresi",
     "youCanAddVideo": "Sitede olmasını istediğiniz videoyu ekleyebilirsiniz. Sadece yüksek kaliteli videolar onaylanır ve sergilenir.",
     "videoOwner": "Video Sahibi",
     "ownerPlaceHolder": "Galatasaray",
@@ -29,10 +29,11 @@
     "buyMeCoffe": "Tıkla ve bana bir kahve ısmarla.",
     "fullStackDeveloper": "Full Stack Developer",
     "name": "Kürşat Şimşek",
-    "about": "Yazılım geliştiriciyim, bazen ilham gelir ve projeler geliştiririm. Ayrıca mühendislik öğrencisiyim. Cimbom maçlarını kaçırmam. Tüm takımı severim Icardi'yi ayrı severim. 🦁",
+    "about": "Yazılım geliştiriciyim, bazen ilham gelir ve projeler geliştiririm. Ayrıca mühendislik öğrencisiyim. Cimbom maçlarını kaçırmam. Tüm takımı severim Icardi'yi ayrı severim.",
     "contactMe": "Eleştiriler ve yeni fikirler için iletişime açığım. Aşağıdaki bağlantılardan ulaşabilirsiniz."
   },
   "categories": {
+    "choose": "Seçin",
     "news": "Haberler",
     "popular": "Popüler",
     "biographic": "Biyografik",

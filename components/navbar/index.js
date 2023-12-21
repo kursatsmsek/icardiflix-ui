@@ -40,24 +40,24 @@ function Navbar({ lang, i18n }) {
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
           href={`/${lang}/add-video`}
         >
-          Add Video
+          {i18n.navigation.addVideo}
         </Link>
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
           href={`/${lang}/developer-contact`}
         >
-          Developer Contact
+          {i18n.navigation.developerContact}
         </Link>
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
           href={`/${lang}/3d-figure`}
         >
-          3D Figür Oyuncak
+          {i18n.navigation.figureToy}
         </Link>
       </div>
 
       <div className="items-center ml-4 space-x-4 text-sm font-light">
-        <LocaleSwitcher lang={lang} />
+        <LocaleSwitcher lang={lang} i18n={i18n} />
       </div>
     </header>
   );
