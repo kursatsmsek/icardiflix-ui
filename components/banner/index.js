@@ -2,13 +2,14 @@ import Image from "next/image";
 import React from "react";
 import { FaPlay } from "react-icons/fa6";
 import { IoIosContact } from "react-icons/io";
+import Background from "@/assets/background.jpg";
 
 function Banner({ lang, i18n }) {
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
         <Image
-          src={`https://wallpapercave.com/wp/wp11861719.jpg`}
+          src={Background}
           layout="fill"
           objectFit="cover"
           alt="{movie?.title || movie?.name || movie?.original_name}"

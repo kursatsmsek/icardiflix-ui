@@ -35,9 +35,12 @@
   "categories": {
     "choose": "Choose",
     "news": "News",
+    "match": "Matches",
     "popular": "Popular",
     "biographic": "Biographic",
+    "game": "Games",
     "mentions": "Mentions",
+    "shorts": "Shorts",
     "other": "Other"
   }
 }

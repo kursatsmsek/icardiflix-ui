@@ -35,9 +35,12 @@
   "categories": {
     "choose": "Elegir",
     "news": "Noticias",
+    "match": "Partidos",
     "popular": "Popular",
     "biographic": "Biográfico",
+    "game": "Juegos",
     "mentions": "Menciones",
+    "shorts": "Shorts",
     "other": "Otro"
   }
 }

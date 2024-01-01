@@ -35,9 +35,12 @@
   "categories": {
     "choose": "Seçin",
     "news": "Haberler",
+    "match": "Maçlar",
     "popular": "Popüler",
     "biographic": "Biyografik",
-    "mentions": "Bahsedilenler",
+    "game": "Oyunlar",
+    "mentions": "Bahsetmeler",
+    "shorts": "Shorts",
     "other": "Diğer"
   }
 }

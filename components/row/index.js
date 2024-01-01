@@ -4,7 +4,7 @@ import Thumbnail from "../thumbnail";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 
-function Row() {
+function Row({ title, data }) {
   const rowRef = useRef();
 
   const handleClick = (direction) => {
@@ -22,8 +22,8 @@ function Row() {
 
   return (
     <div className="h-40 space-y-0.5 md:space-y-2">
-      <h2 className="w-56 cursor-pointer text-sm font-semibold text-[#e5e5e5] transition duration-200 hover:text-white md:text-2xl">
-        Kürşat
+      <h2 className="w-56 capitalize cursor-pointer text-sm font-semibold text-[#e5e5e5] transition duration-200 hover:text-white md:text-2xl">
+        {title}
       </h2>
       <div className="group relative md:-ml-2">
         <FaChevronLeft
@@ -35,28 +35,14 @@ function Row() {
           ref={rowRef}
           className="flex items-center space-x-0.5 overflow-x-scroll scrollbar-hide md:space-x-2.5 md:p-2"
         >
-          {/* {movies.map((movie) => (
-        <Thumbnail key={movie.id} movie={movie} />
-      ))} */}
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
+          {data.map((item) => (
+            <Thumbnail
+              key={item.id}
+              date={item.date}
+              youtubeUrl={item.youtubeUrl}
+              photoUrl={item.photoUrl}
+            />
+          ))}
         </div>
 
         <FaChevronRight
