@@ -19,7 +19,8 @@
     "description": "Descripción",
     "descriptionPlaceHolder": "Algo sobre el video...",
     "category": "Categoría",
-    "views": "Vistas"
+    "views": "Vistas",
+    "requestMessage": "Se ha recibido su solicitud."
   },
   "button": {
     "play": "Reproducir",

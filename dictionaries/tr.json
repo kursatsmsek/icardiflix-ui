@@ -19,7 +19,8 @@
     "description": "Açıklama",
     "descriptionPlaceHolder": "Video hakkında bir şeyler...",
     "category": "Kategori",
-    "views": "Görüntüleme"
+    "views": "Görüntüleme",
+    "requestMessage": "Talebiniz alınmıştır."
   },
   "button": {
     "play": "Oynat",

@@ -1,22 +1,41 @@
 "use client";
+import { addVideoRequest } from "@/utils/apiCalls";
+import { Snackbar } from "@mui/material";
 import React, { useState } from "react";
 
 function AddVideoContainer({ lang, i18n }) {
+  const [messageShow, setMessageShow] = useState(false);
+
   const emptyFormData = {
     owner: "",
-    url: "",
+    youtubeUrl: "",
     description: "",
     category: "",
   };
 
   const [data, setData] = useState(emptyFormData);
 
-  const formOnSubmit = (e) => {
+  const formOnSubmit = async (e) => {
     e.preventDefault();
+
+    const response = await addVideoRequest(data);
+
+    if (response.ok) {
+      setMessageShow(true);
+      setData(emptyFormData);
+    }
   };
 
   return (
     <form className="max-w-sm mx-auto mt-28 p-4" onSubmit={formOnSubmit}>
+      <Snackbar
+        severity="success"
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        open={messageShow}
+        onClose={() => setMessageShow(false)}
+        autoHideDuration={2000}
+        message={i18n.page.requestMessage}
+      />
       {/* owner */}
       <div className="mb-5">
         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -42,13 +61,13 @@ function AddVideoContainer({ lang, i18n }) {
           {i18n.page.youtubeLink}
         </label>
         <input
-          id="url"
-          type="url"
-          value={data.url}
+          id="youtubeUrl"
+          type="youtubeUrl"
+          value={data.youtubeUrl}
           placeholder={i18n.page.linkPlaceHolder}
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
-          onChange={(e) => setData({ ...data, url: e.target.value })}
+          onChange={(e) => setData({ ...data, youtubeUrl: e.target.value })}
         />
       </div>
 
@@ -86,11 +105,14 @@ function AddVideoContainer({ lang, i18n }) {
           <option disabled value={""}>
             {i18n.categories.choose}
           </option>
-          <option value={"news"}> {i18n.categories.news}</option>
-          <option value={"popular"}> {i18n.categories.popular}</option>
-          <option value={"biographic"}> {i18n.categories.biographic}</option>
-          <option value={"mentioned"}> {i18n.categories.mentions}</option>
-          <option value={"other"}> {i18n.categories.other}</option>
+          <option value={"NEWS"}> {i18n.categories.news}</option>
+          <option value={"POPULAR"}> {i18n.categories.popular}</option>
+          <option value={"BIOGRAPHIC"}> {i18n.categories.biographic}</option>
+          <option value={"MENTIONS"}> {i18n.categories.mentions}</option>
+          <option value={"SHORTS"}> {i18n.categories.shorts}</option>
+          <option value={"GAME"}> {i18n.categories.game}</option>
+          <option value={"MATCH"}> {i18n.categories.match}</option>
+          <option value={"OTHER"}> {i18n.categories.other}</option>
         </select>
       </div>
 

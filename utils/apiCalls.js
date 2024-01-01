@@ -173,3 +173,17 @@ export async function clickEmail() {
     console.error("Error:", error.message);
   }
 }
+
+export async function addVideoRequest(data) {
+  try {
+    return await fetch(`${baseUrl}/petition/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
