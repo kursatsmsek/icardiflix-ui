@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import MuiModal from "@mui/material/Modal";
 import { IoMdClose } from "react-icons/io";
+import { CircularProgress, Skeleton } from "@mui/material";
 
 function Popup({ isOpen, setIsOpen, modalData, setModalData, lang, i18n }) {
-  const [muted, setMuted] = useState(false);
-
   function dateFormat(date) {
     const tarih = new Date(date);
 
@@ -36,6 +35,15 @@ function Popup({ isOpen, setIsOpen, modalData, setModalData, lang, i18n }) {
         </button>
 
         <div className="relative pt-[56.25%]">
+          <div className="w-full h-full absolute top-0 flex items-center justify-center">
+            <Skeleton
+              variant="rectangular"
+              animation="wave"
+              sx={{ bgcolor: "grey.900" }}
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
           <ReactPlayer
             url={modalData.youtubeUrl}
             controls={true}
@@ -47,7 +55,6 @@ function Popup({ isOpen, setIsOpen, modalData, setModalData, lang, i18n }) {
               left: "0",
             }}
             playing
-            muted={muted}
           />
         </div>
 
