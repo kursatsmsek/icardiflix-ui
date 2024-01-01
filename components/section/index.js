@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Popup from "../modal";
 import Row from "../row";
 
-function Section({ i18n, data }) {
+function Section({ lang, i18n, data }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [modalData, setModalData] = useState({
@@ -26,6 +26,8 @@ function Section({ i18n, data }) {
         setIsOpen={setIsOpen}
         modalData={modalData}
         setModalData={setModalData}
+        lang={lang}
+        i18n={i18n}
       />
       <Row
         title={i18n.categories.news}

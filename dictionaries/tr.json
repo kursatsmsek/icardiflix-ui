@@ -18,7 +18,8 @@
     "linkPlaceHolder": "Ör: youtube.com/watch?v=7YRTcNtv8pk",
     "description": "Açıklama",
     "descriptionPlaceHolder": "Video hakkında bir şeyler...",
-    "category": "Kategori"
+    "category": "Kategori",
+    "views": "Görüntüleme"
   },
   "button": {
     "play": "Oynat",

@@ -12,7 +12,7 @@ async function HomeContainer({ lang, i18n }) {
     <div className={`relative h-screen bg-gradient-to-b lg:h-[140vh]`}>
       <main className="relative pt-16 pl-4 pb-24 lg:space-y-24 lg:pl-16">
         <Banner lang={lang} i18n={i18n} />
-        <Section i18n={i18n} data={data} />
+        <Section lang={lang} i18n={i18n} data={data} />
       </main>
     </div>
   );
