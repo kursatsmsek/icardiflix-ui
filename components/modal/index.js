@@ -4,22 +4,18 @@ import ReactPlayer from "react-player";
 import MuiModal from "@mui/material/Modal";
 import { IoMdClose } from "react-icons/io";
 
-function Popup() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+function Popup({ isOpen, setIsOpen, modalData, setModalData }) {
   const [muted, setMuted] = useState(false);
 
   return (
     <MuiModal
-      open={open}
-      onClose={handleClose}
+      open={isOpen}
+      onClose={() => setIsOpen(false)}
       className="fixed !top-7 left-0 right-0 z-50 mx-auto w-full max-w-5xl overflow-hidden overflow-y-scroll rounded-md scrollbar-hide"
     >
       <>
         <button
-          onClick={handleClose}
+          onClick={() => setIsOpen(false)}
           className="modalButton absolute right-5 top-5 !z-40 h-9 w-9 border-none bg-[#181818] hover:bg-[#181818]"
         >
           <IoMdClose className="h-6 w-6" />
@@ -27,8 +23,7 @@ function Popup() {
 
         <div className="relative pt-[56.25%]">
           <ReactPlayer
-            url={`https://www.youtube.com/watch?v=7YRTcNtv8pk`}
-            // url={`https://www.youtube.com/watch?v=6xWKok3brqg`}
+            url={modalData?.youtubeUrl}
             controls={true}
             width="100%"
             height="100%"
@@ -45,7 +40,7 @@ function Popup() {
         <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-8">
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
-              <p className="font-semibold text-green-400">Galatasaray</p>
+              <p className="font-semibold text-green-400">{modalData?.owner}</p>
               <p className="font-light">12.12.2023</p>
               <div className="flex h-4 items-center justify-center rounded border border-white/40 px-1.5 text-xs">
                 HD
