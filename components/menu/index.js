@@ -5,6 +5,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import Icardi from "@/assets/menu-photo.png";
+import {
+  clickAddVideo,
+  clickDeveloperContact,
+  clickFigureToy,
+  clickLogo,
+} from "@/utils/apiCalls";
 
 function HamburgerMenu({ lang, i18n }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -20,7 +26,7 @@ function HamburgerMenu({ lang, i18n }) {
       >
         <div className="flex flex-col w-72 h-full text-[red]/80 bg-[#141414]">
           <div className="h-1/4 flex justify-center items-center">
-            <Link href={`/${lang}`}>
+            <Link href={`/${lang}`} onClick={async () => await clickLogo()}>
               <Image
                 src="/icardiflix-logo.png"
                 width={180}
@@ -36,7 +42,10 @@ function HamburgerMenu({ lang, i18n }) {
               <Link
                 className=" p-3 rounded"
                 href={`/${lang}/add-video`}
-                onClick={() => setDrawerOpen(false)}
+                onClick={async () => {
+                  await clickAddVideo();
+                  setDrawerOpen(false);
+                }}
               >
                 {i18n.navigation.addVideo}
               </Link>
@@ -45,7 +54,10 @@ function HamburgerMenu({ lang, i18n }) {
               <Link
                 className=" p-3 rounded"
                 href={`/${lang}/developer-contact`}
-                onClick={() => setDrawerOpen(false)}
+                onClick={async () => {
+                  await clickDeveloperContact();
+                  setDrawerOpen(false);
+                }}
               >
                 {i18n.navigation.developerContact}
               </Link>
@@ -54,14 +66,23 @@ function HamburgerMenu({ lang, i18n }) {
               <Link
                 className=" p-3 rounded"
                 href={`/${lang}/3d-figure`}
-                onClick={() => setDrawerOpen(false)}
+                onClick={async () => {
+                  await clickFigureToy();
+                  setDrawerOpen(false);
+                }}
               >
                 {i18n.navigation.figureToy}
               </Link>
             </button>
           </div>
           <div className="h-1/4 flex justify-center bg-[#141414]">
-            <Link href={`/${lang}`} onClick={() => setDrawerOpen(false)}>
+            <Link
+              href={`/${lang}`}
+              onClick={async () => {
+                await clickLogo();
+                setDrawerOpen(false);
+              }}
+            >
               <Image src={Icardi} width={80} height={100} alt="mauro-icardi" />
             </Link>
           </div>

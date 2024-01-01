@@ -7,6 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { FaAt } from "react-icons/fa6";
+import SocialLinks from "@/components/client/social-link-buttons";
 
 function DeveloperContactContainer({ lang, i18n }) {
   return (
@@ -58,43 +59,7 @@ function DeveloperContactContainer({ lang, i18n }) {
               <p className="mb-6 text-base leading-7 text-gray-500 dark:text-gray-400">
                 {i18n.developer.contactMe}
               </p>
-              <div className="flex">
-                <Link
-                  target="_blank"
-                  href="https://www.instagram.com/kursatsmsek"
-                  className="pr-6 py-2"
-                >
-                  <FaInstagram className="text-2xl" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://twitter.com/fckursat"
-                  className="pr-6 py-2"
-                >
-                  <FaSquareXTwitter className="text-2xl" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://www.linkedin.com/in/kursatsmsek/"
-                  className="pr-6 py-2"
-                >
-                  <FaLinkedin className="text-2xl" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://github.com/kursatsmsek"
-                  className="pr-6 py-2"
-                >
-                  <FaGithub className="text-2xl" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="mailto:kursatsimsek@protonmail.ch"
-                  className="pr-6 py-2"
-                >
-                  <FaAt className="text-2xl" />
-                </Link>
-              </div>
+              <SocialLinks />
             </div>
           </div>
         </div>

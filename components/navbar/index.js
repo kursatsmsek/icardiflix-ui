@@ -3,6 +3,12 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "../locale-switcher";
 import Link from "next/link";
+import {
+  clickAddVideo,
+  clickDeveloperContact,
+  clickFigureToy,
+  clickLogo,
+} from "@/utils/apiCalls";
 
 function Navbar({ lang, i18n }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +32,7 @@ function Navbar({ lang, i18n }) {
   return (
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <Link href={`/${lang}`}>
+        <Link href={`/${lang}`} onClick={async () => await clickLogo()}>
           <Image
             src="/icardiflix-logo.png"
             width={160}
@@ -39,18 +45,21 @@ function Navbar({ lang, i18n }) {
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
           href={`/${lang}/add-video`}
+          onClick={async () => await clickAddVideo()}
         >
           {i18n.navigation.addVideo}
         </Link>
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
           href={`/${lang}/developer-contact`}
+          onClick={async () => await clickDeveloperContact()}
         >
           {i18n.navigation.developerContact}
         </Link>
         <Link
           className="p-2 text-sm rounded hidden md:inline-block transition duration-300 hover:bg-gray-700 hover:bg-opacity-70"
           href={`/${lang}/3d-figure`}
+          onClick={async () => await clickFigureToy()}
         >
           {i18n.navigation.figureToy}
         </Link>
