@@ -6,8 +6,6 @@ import React from "react";
 async function HomeContainer({ lang, i18n }) {
   let data = await allVideos();
 
-  console.log("Data => ", data["news"]);
-
   return (
     <div className={`relative h-screen bg-gradient-to-b lg:h-[140vh]`}>
       <main className="relative pt-16 pl-4 pb-24 lg:space-y-24 lg:pl-16">

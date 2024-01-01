@@ -201,3 +201,15 @@ export async function addFigureToyRequest(data) {
     console.error("Error:", error.message);
   }
 }
+
+export async function getIntroStatistic() {
+  try {
+    const response = await fetch(`${baseUrl}/statistic/INTRO_PLAY`);
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
