@@ -187,3 +187,17 @@ export async function addVideoRequest(data) {
     console.error("Error:", error.message);
   }
 }
+
+export async function addFigureToyRequest(data) {
+  try {
+    return await fetch(`${baseUrl}/property/figure-toy`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}

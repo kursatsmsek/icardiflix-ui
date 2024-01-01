@@ -1,19 +1,37 @@
 "use client";
+import { addFigureToyRequest } from "@/utils/apiCalls";
+import { Snackbar } from "@mui/material";
 import React, { useState } from "react";
 
 function FigureToyContainer({ lang, i18n }) {
+  const [messageShow, setMessageShow] = useState(false);
   const emptyFormData = {
     email: "",
   };
 
   const [data, setData] = useState(emptyFormData);
 
-  const formOnSubmit = (e) => {
+  const formOnSubmit = async (e) => {
     e.preventDefault();
+
+    const response = await addFigureToyRequest(data);
+
+    if (response.ok) {
+      setMessageShow(true);
+      setData(emptyFormData);
+    }
   };
 
   return (
     <form className="max-w-xl mx-auto mt-56 p-4" onSubmit={formOnSubmit}>
+      <Snackbar
+        severity="success"
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        open={messageShow}
+        onClose={() => setMessageShow(false)}
+        autoHideDuration={2000}
+        message={i18n.page.requestMessage}
+      />
       <h1 className="text-6xl mb-10 leading-7 text-gray-500 dark:text-gray-400">
         {i18n.page.soon} 🦁
       </h1>
