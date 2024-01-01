@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { FaPlay } from "react-icons/fa6";
-import { IoIosContact } from "react-icons/io";
 import Background from "@/assets/background.jpg";
+import DeveloperContactLinkButton from "../client/developer-link-button";
+import PlayButton from "../client/play-button";
 
 function Banner({ lang, i18n }) {
   return (
@@ -12,7 +13,7 @@ function Banner({ lang, i18n }) {
           src={Background}
           layout="fill"
           objectFit="cover"
-          alt="{movie?.title || movie?.name || movie?.original_name}"
+          alt="icardiflix"
         />
       </div>
 
@@ -24,20 +25,8 @@ function Banner({ lang, i18n }) {
       </p>
 
       <div className="flex">
-        <button className="bannerButton bg-white text-black">
-          <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" />{" "}
-          {i18n.button.play}
-        </button>
-        <button
-          className="bannerButton bg-[gray]/70 ml-4 mr-4"
-          //   onClick={() => {
-          //     setCurrentMovie(movie)
-          //     setShowModal(true)
-          //   }}
-        >
-          {i18n.navigation.developerContact}
-          <IoIosContact className="h-5 w-5 md:h-8 md:w-8" />
-        </button>
+        <PlayButton i18n={i18n} lang={lang} />
+        <DeveloperContactLinkButton i18n={i18n} />
       </div>
     </div>
   );

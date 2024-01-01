@@ -69,7 +69,7 @@ function Popup({ isOpen, setIsOpen, modalData, setModalData, lang, i18n }) {
             </div>
 
             <div className="flex flex-col gap-x-10 gap-y-4 font-light md:flex-row">
-              <p className="w-5/6">
+              <p className="min-w-[80%]">
                 {lang === "tr" && modalData.descTurkish}
                 {lang === "en" && modalData.descEnglish}
                 {lang === "es" && modalData.descSpanish}

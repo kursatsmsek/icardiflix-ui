@@ -23,3 +23,23 @@ export async function getVideo(id) {
     console.error("Error fetching video:", error.message);
   }
 }
+
+export async function clickDeveloperContact() {
+  try {
+    await fetch(`${baseUrl}/statistic/DEVELOPER_CONTACT`, {
+      method: "PUT",
+    });
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
+
+export async function clickIntroPlay() {
+  try {
+    await fetch(`${baseUrl}/statistic/INTRO_PLAY`, {
+      method: "PUT",
+    });
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
