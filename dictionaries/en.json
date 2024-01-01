@@ -18,7 +18,8 @@
     "linkPlaceHolder": "E.g., youtube.com/watch?v=7YRTcNtv8pk",
     "description": "Description",
     "descriptionPlaceHolder": "Something about the video...",
-    "category": "Category"
+    "category": "Category",
+    "views": "Views"
   },
   "button": {
     "play": "Play",

@@ -11,3 +11,15 @@ export async function allVideos() {
     console.error("Error fetching video:", error.message);
   }
 }
+
+export async function getVideo(id) {
+  try {
+    const response = await fetch(`${baseUrl}/video/${id}`);
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching video:", error.message);
+  }
+}

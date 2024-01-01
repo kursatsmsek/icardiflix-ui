@@ -4,7 +4,7 @@ import Thumbnail from "../thumbnail";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 
-function Row({ title, data }) {
+function Row({ title, data, isOpen, setIsOpen, modalData, setModalData }) {
   const rowRef = useRef();
 
   const handleClick = (direction) => {
@@ -41,6 +41,9 @@ function Row({ title, data }) {
               date={item.date}
               youtubeUrl={item.youtubeUrl}
               photoUrl={item.photoUrl}
+              setIsOpen={setIsOpen}
+              id={item.id}
+              setModalData={setModalData}
             />
           ))}
         </div>
