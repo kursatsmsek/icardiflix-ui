@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8080/api/v1";
+const baseUrl = process.env.NEXT_PUBLIC_SERVICE_URL;
 
 export async function allVideos() {
   try {
