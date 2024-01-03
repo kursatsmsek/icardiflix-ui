@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import Icardi from "@/assets/menu-photo.png";
+import Logo from "@/assets/icardiflix-logo.png";
 import {
   clickAddVideo,
   clickDeveloperContact,
@@ -28,7 +29,7 @@ function HamburgerMenu({ lang, i18n }) {
           <div className="h-1/4 flex justify-center items-center">
             <Link href={`/${lang}`} onClick={async () => await clickLogo()}>
               <Image
-                src="/icardiflix-logo.png"
+                src={Logo}
                 width={180}
                 height={100}
                 className="cursor-pointer object-contain w-auto h-auto m-4"

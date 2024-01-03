@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "../locale-switcher";
 import Link from "next/link";
+import Logo from "@/assets/icardiflix-logo.png";
 import {
   clickAddVideo,
   clickDeveloperContact,
@@ -34,7 +35,7 @@ function Navbar({ lang, i18n }) {
       <div className="flex items-center space-x-2 md:space-x-10">
         <Link href={`/${lang}`} onClick={async () => await clickLogo()}>
           <Image
-            src="/icardiflix-logo.png"
+            src={Logo}
             width={160}
             height={100}
             className="cursor-pointer object-contain w-auto h-auto mr-4"
