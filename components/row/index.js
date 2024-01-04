@@ -35,7 +35,7 @@ function Row({ title, data, isOpen, setIsOpen, modalData, setModalData }) {
           ref={rowRef}
           className="flex items-center space-x-0.5 overflow-x-scroll scrollbar-hide md:space-x-2.5 md:p-2"
         >
-          {data.map((item) => (
+          {data?.map((item) => (
             <Thumbnail
               key={item.id}
               date={item.date}
