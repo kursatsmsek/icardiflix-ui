@@ -89,7 +89,7 @@ function Section({ lang, i18n }) {
         modalData={modalData}
         setModalData={setModalData}
       />
-      <Row
+      {/* <Row
         title={i18n.categories.shorts}
         data={data?.shorts}
         isOpen={isOpen}
@@ -104,7 +104,7 @@ function Section({ lang, i18n }) {
         setIsOpen={setIsOpen}
         modalData={modalData}
         setModalData={setModalData}
-      />
+      /> */}
     </section>
   );
 }
