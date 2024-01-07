@@ -22,11 +22,11 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }) {
   return (
     <html lang={params.lang}>
-      <Head>
+      {/* <Head>
         <script async src={adsenseUrl} crossorigin="anonymous"></script>
       </Head>
       <Script async src={adsenseUrl} crossOrigin="anonymous" />
-      <GoogleAdSense publisherId="pub-2754491409789428" />
+      <GoogleAdSense publisherId="pub-2754491409789428" /> */}
       <body className={inter.className}>
         <Header lang={params.lang} />
         <main>{children}</main>

@@ -16,6 +16,7 @@ function getLocale(request) {
 
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;
+  if (pathname.startsWith(`/ads`)) return;
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
