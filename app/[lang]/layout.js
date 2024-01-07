@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 import { i18n } from "@/i18n.config";
 import Header from "@/components/header";
 import Head from "next/head";
+import Script from "next/script";
+import { GoogleAdSense } from "nextjs-google-adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,8 @@ export default function RootLayout({ children, params }) {
       <Head>
         <script async src={adsenseUrl} crossorigin="anonymous"></script>
       </Head>
+      <Script async src={adsenseUrl} crossOrigin="anonymous" />
+      <GoogleAdSense publisherId="pub-2754491409789428" />
       <body className={inter.className}>
         <Header lang={params.lang} />
         <main>{children}</main>
