@@ -8,8 +8,6 @@ import { GoogleAdSense } from "nextjs-google-adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const adsenseUrl = process.env.NEXT_PUBLIC_ADSENSE_URL;
-
 export const metadata = {
   title: "Icardiflix",
   description: "Icardiflix Video Website",
