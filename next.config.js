@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "standalone",
   images: {
-    remotePatterns: ["wallpapercave.com", "cdn.ntvspor.net", "i3.ytimg.com"],
+    domains: ["wallpapercave.com", "cdn.ntvspor.net", "i3.ytimg.com"],
   },
 };
 
