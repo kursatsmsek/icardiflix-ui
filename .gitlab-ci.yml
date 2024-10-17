@@ -9,8 +9,10 @@ variables:
   CI_REGISTRY_IMAGE: $CI_REGISTRY_IMAGE
 
 build:
+  image: docker:latest
   stage: build
-  image: node:latest
+  services:
+    - docker:dind
   script:
     - docker build -t $DOCKER_IMAGE .
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
