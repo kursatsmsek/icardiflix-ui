@@ -26,7 +26,9 @@ deploy:
     - chmod og= $SSH_PRIVATE_KEY
     - apk update && apk add openssh-client
     - ssh -i $SSH_PRIVATE_KEY -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY"
-    - ssh -i $SSH_PRIVATE_KEY -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && docker-compose pull && docker-compose up -d"
+    - ssh -i $SSH_PRIVATE_KEY -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "docker pull $DOCKER_IMAGE"
+    - ssh -i $SSH_PRIVATE_KEY -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "docker container rm -f icardiflix-ui || true"
+    - ssh -i $SSH_PRIVATE_KEY -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "docker run -d -p 3000:3000 --name icardiflix-ui $DOCKER_IMAGE"
   environment:
     name: production
     url: http://194.105.5.161
